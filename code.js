@@ -21,3 +21,13 @@ function isFive(num){
 function isEven(num){
     return num%2 === 0;
 };
+
+function isVowel(letter){
+    if(typeof(letter)!= "string"){
+        return false
+    }else if(letter.length === 1 && letter.match(/[aeiou]/gi)){
+        return true
+    }else{
+        return false
+    }
+};

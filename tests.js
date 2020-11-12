@@ -76,3 +76,36 @@ describe('isEven', function() {
         expect(isEven()).not.toBe(undefined);
     });
 });
+
+describe('isVowel', function() {
+    it('should be a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a boolean when called', function() {
+        expect(typeof isVowel()).toBe("boolean");
+    });
+    it('should return the boolean true when "a" is called', function() {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return the boolean true when "A" is called', function() {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return the boolean false when "y" is called', function() {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return the boolean false when 4 is called', function() {
+        expect(isVowel(4)).toBe(false);
+    });
+    it('should return the boolean false when either true or false are called', function() {
+        expect(isVowel(true)).toBe(false);
+    });
+    it('should return the boolean false when "banana" is called', function() {
+        expect(isVowel("banana")).toBe(false);
+    });
+    it('should return the boolean false when no argument is given', function() {
+        expect(isVowel()).toBe(false);
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(isVowel()).not.toBe(undefined);
+    });
+});
