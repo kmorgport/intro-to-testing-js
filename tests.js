@@ -109,3 +109,37 @@ describe('isVowel', function() {
         expect(isVowel()).not.toBe(undefined);
     });
 });
+
+
+describe('add', function() {
+    it('should be a defined function', function() {
+        expect(typeof add).toBe('function');
+    });
+    it('should return a number when called', function() {
+        expect(typeof add()).toBe("number");
+    });
+    it('should return the sum of 2 and 3 when called', function() {
+        expect(add(2,3)).toBe(5);
+    });
+    it('should return the sum of -3 and -9 when called', function() {
+        expect(add(-3,-9)).toBe(-12);
+    });
+    it('should return the sum of "5" and 6 when called', function() {
+        expect(add("5",6)).toBe(11);
+    });
+    it('should return the sum of "-4" and "10" when called', function() {
+        expect(add("-4","10")).toBe(6);
+    });
+    it('should return NAN when "banana" and "split" are called', function() {
+        expect(add("banana","split")).toBeNaN();
+    });
+    it('should return NAN when 2 and "apples" are called', function() {
+        expect(add(2,"apples")).toBeNaN();
+    });
+    it('should return NAN when no argument is passed', function() {
+        expect(add()).toBeNaN();
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(add()).not.toBe(undefined);
+    });
+});

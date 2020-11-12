@@ -31,3 +31,12 @@ function isVowel(letter){
         return false
     }
 };
+
+function add(x,y){
+    if(parseInt(x)==NaN ||parseInt(y)==NaN) {
+        return NaN;
+    }
+        else{
+            return parseFloat(x)+parseFloat(y);
+        }
+    };
