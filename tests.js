@@ -48,3 +48,31 @@ describe('isFive', function() {
     });
 });
 
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return a boolean when called', function() {
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it('should return the boolean true or false when called', function() {
+        expect(isEven(2)).toBe(true);});
+    it('should return the boolean true or false when called', function() {
+        expect(isEven(3)).toBe(false);});
+    it('should return the boolean true or false when called', function() {
+        expect(isEven(-4)).toBe(true);});
+    it('should return the boolean true or false when called', function() {
+        expect(isEven("banana")).toBe(false);});
+    it('should return the boolean true or false when called', function() {
+        expect(isEven("8")).toBe(true);});
+    it('should return the boolean true or false when called', function() {
+        expect(isEven(true)).toBe(false);});
+    it('should return the boolean true or false when called', function() {
+        expect(isEven(Infinity)).toBe(false);});
+    it('should return the boolean true or false when called', function() {
+        expect(isEven()).toBe(false);
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(isEven()).not.toBe(undefined);
+    });
+});
