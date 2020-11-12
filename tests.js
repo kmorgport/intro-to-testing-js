@@ -31,3 +31,20 @@ describe('sayHello', function(){
     });
 
 });
+
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a boolean when called', function() {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it('should return the boolean true or false when called', function() {
+        expect(isFive(5)).toBe(true);
+        expect(isFive(!5)).toBe(false);
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(isFive()).not.toBe(undefined);
+    });
+});
+

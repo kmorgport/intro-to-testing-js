@@ -4,8 +4,16 @@ function helloWorld() {
 }
 
 function sayHello(name){
-    if(name === true||name ===){
+    if(name === true||name === false){
         return "Hello World!"
     }else{
     return "Hello "+name+".";
 }};
+
+function isFive(num){
+    if(parseInt(num) == 5){
+        return true;}
+    else{
+        return false
+    }
+}
